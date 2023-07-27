@@ -9,9 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    public class UserController
-    {
-            [ApiController]
+    [ApiController]
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
@@ -32,6 +30,5 @@ namespace API.Controllers
         {
             return await _context.Users.FindAsync(id);
         }
-    }
     }
 }

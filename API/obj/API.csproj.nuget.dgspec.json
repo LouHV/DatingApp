@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code\\DatingAPP\\API\\API.csproj": {}
+    "D:\\Code\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\Code\\DatingAPP\\API\\API.csproj": {
+    "D:\\Code\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\DatingAPP\\API\\API.csproj",
+        "projectUniqueName": "D:\\Code\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Code\\DatingAPP\\API\\API.csproj",
+        "projectPath": "D:\\Code\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\luuho\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\DatingAPP\\API\\obj\\",
+        "outputPath": "D:\\Code\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luuho\\AppData\\Roaming\\NuGet\\NuGet.Config",
