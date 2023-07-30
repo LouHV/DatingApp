@@ -23,10 +23,11 @@ namespace API.Services
             {
                 new Claim(JwtRegisteredClaimNames.NameId,user.UserName)
             };
-            var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
+           var creds = new SigningCredentials(_key,SecurityAlgorithms.HmacSha512Signature);
             var tokenDescriptor = new SecurityTokenDescriptor{
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.Now.AddDays(7),
+                // SigningCredentials = creds
             };
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
