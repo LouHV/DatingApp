@@ -32,6 +32,7 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 
 
@@ -52,7 +53,8 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
     MemberEditComponent,
     PhotoEditorComponent,
     TextInputComponent,
-    DateInputComponent
+    DateInputComponent,
+    MemberMessagesComponent
   ],
   imports: [
     BrowserModule,
