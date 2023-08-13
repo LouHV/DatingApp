@@ -20,12 +20,14 @@ namespace API.Middleware
             _next = next;
         }
 
-        public async Task InvokeAsync(HttpContext context)
+        public async Task InvokeAsync(HttpContext context)// nhận một đối tượng HttpContext, đại diện cho tất cả thông tin về request HTTP đang được xử lý.
         {
             try
             {
                 await _next(context);
             }
+            //bắt bất kỳ ngoại lệ nào xảy ra trong pipeline. Nó ghi log ngoại lệ, đặt trạng thái phản hồi là InternalServerError (500), 
+            //và tạo một đối tượng ApiException mới với thông tin về ngoại lệ
             catch(Exception ex)
             {
                 _logger.LogError(ex,ex.Message);
@@ -37,9 +39,9 @@ namespace API.Middleware
                 : new ApiException(context.Response.StatusCode,"Internal Server Error");
 
                 var options = new JsonSerializerOptions{PropertyNamingPolicy = JsonNamingPolicy.CamelCase};
-                var json = JsonSerializer.Serialize(response,options);
+                var json = JsonSerializer.Serialize(response,options);//chuyển đổi đối tượng response thành JSON
 
-                await context.Response.WriteAsync(json);
+                await context.Response.WriteAsync(json);//ghi nó vào phản hồi HTTP
             }
         }
     }

@@ -80,3 +80,9 @@ D:\Code\DatingApp\API\bin\Debug\net7.0\AutoMapper.dll
 D:\Code\DatingApp\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Code\DatingApp\API\bin\Debug\net7.0\CloudinaryDotNet.dll
 D:\Code\DatingApp\API\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Code\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Code\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Code\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Code\DatingApp\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\Code\DatingApp\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Code\DatingApp\API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

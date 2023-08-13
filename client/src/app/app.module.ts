@@ -33,6 +33,11 @@ import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
+import { HasRoleDirective } from './_derectives/has-role.directive';
+import { UserManagementComponent } from './admin/user-management/user-management.component';
+import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
+import { PhotoManagementComponent } from './admin/photo-management/photo-management/photo-management.component';
 
 
 
@@ -54,7 +59,12 @@ import { MemberMessagesComponent } from './members/member-messages/member-messag
     PhotoEditorComponent,
     TextInputComponent,
     DateInputComponent,
-    MemberMessagesComponent
+    MemberMessagesComponent,
+    AdminPanelComponent,
+    HasRoleDirective,
+    UserManagementComponent,
+    RolesModalComponent,
+    PhotoManagementComponent
   ],
   imports: [
     BrowserModule,
