@@ -10,9 +10,9 @@ namespace API.Data
         public static async Task SeedUsers (UserManager<AppUser> userManager,
             RoleManager<AppRole> roleManager)
         {
-            if(await userManager.Users.AnyAsync()) return;
+            if(await userManager.Users.AnyAsync()) return;//kiểm tra xem có bất kỳ người dùng nào trong cơ sở dữ liệu không
 
-            var userData = await System.IO.File.ReadAllTextAsync("Data/UserSeedData.json");
+            var userData = await System.IO.File.ReadAllTextAsync("Data/UserSeedData.json");//Nếu không có người dùng nào, nó sẽ đọc một tệp JSON
 
             var users = JsonSerializer.Deserialize<List<AppUser>>(userData);
 
@@ -27,7 +27,7 @@ namespace API.Data
 
             foreach(var role in roles)
             {
-                await roleManager.CreateAsync(role);
+                await roleManager.CreateAsync(role);// mỗi vai trò được thêm vào cơ sở dữ liệu 
             }
 
             foreach(var user in users){

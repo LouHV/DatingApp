@@ -20,7 +20,8 @@ namespace API.Middleware
             _next = next;
         }
 
-        public async Task InvokeAsync(HttpContext context)// nhận một đối tượng HttpContext, đại diện cho tất cả thông tin về request HTTP đang được xử lý.
+        public async Task InvokeAsync(HttpContext context)
+        // nhận một đối tượng HttpContext, đại diện cho tất cả thông tin về request HTTP đang được xử lý.
         {
             try
             {

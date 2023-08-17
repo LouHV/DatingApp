@@ -9,8 +9,8 @@ import { User } from 'src/app/_models/user';
 })
 export class RolesModalComponent {
   @Input() updateSelectedRoles = new EventEmitter();
-  user: User;
-  roles: any[];
+  user!: User;
+  roles: any[]=[];
 constructor(public bsModalRef:BsModalRef){
 
 }

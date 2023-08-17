@@ -32,7 +32,8 @@ namespace API.Services
                 using var stream = file.OpenReadStream();
                 var uploadParams = new ImageUploadParams{
                     File = new FileDescription(file.FileName,stream),// Thông tin về file hình ảnh và dữ liệu stream
-                    Transformation = new Transformation().Height(500).Width(500).Crop("fill").Gravity("face")// Thực hiện các biến đổi trên hình ảnh trước khi tải lên
+                    // Thực hiện các biến đổi trên hình ảnh trước khi tải lên
+                    Transformation = new Transformation().Height(500).Width(500).Crop("fill").Gravity("face")
                 };
                  // Gọi phương thức UploadAsync của đối tượng Cloudinary để tải lên hình ảnh
                 uploadResult = await _cloudinary.UploadAsync(uploadParams);

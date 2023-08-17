@@ -17,7 +17,7 @@ namespace API.Extensions
         IConfiguration config){
 
             services.AddIdentityCore<AppUser>(opt =>{
-                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireNonAlphanumeric = false;//mật khẩu không cần phải chứa ký tự không phải chữ và số
             })
                 .AddRoles<AppRole>()
                 .AddRoleManager<RoleManager<AppRole>>()
@@ -25,6 +25,7 @@ namespace API.Extensions
                 .AddRoleValidator<RoleValidator<AppRole>>()
                 .AddEntityFrameworkStores<DataContext>();
 
+            //thêm dịch vụ xác thực vào DI container và cấu hình nó để sử dụng JWT (JSON Web Tokens).
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options => 
             {
@@ -36,7 +37,8 @@ namespace API.Extensions
                     ValidateAudience = false,
                 };
             });
-
+            
+            // thêm dịch vụ ủy quyền vào DI container
             services.AddAuthorization(opt=>{
                 opt.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
                 opt.AddPolicy("ModeratePhotoRole", policy => policy.RequireRole("Admin","Moderator"));

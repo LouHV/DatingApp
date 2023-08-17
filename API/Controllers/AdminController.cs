@@ -23,8 +23,8 @@ namespace API.Controllers
         public async  Task<ActionResult> GetUsersWithRoles()
         {
             var users = await _userManager.Users
-            .Include(r=>r.UserRoles)
-            .ThenInclude(r=>r.Role)
+            .Include(r=>r.UserRoles) //sử dụng eager loading để tải các UserRoles và Role liên quan đến mỗi User. 
+            .ThenInclude(r=>r.Role)//Điều này giúp tránh N+1 problem, một vấn đề hiệu suất phổ biến khi làm việc với các mối quan hệ trong cơ sở dữ liệu.
             .OrderBy(u=>u.UserName)
             .Select(u=>new{
                 u.Id,

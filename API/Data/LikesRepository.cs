@@ -36,6 +36,8 @@ namespace API.Data
                  likes = likes.Where(like=>like.LikedUserId == likesParams.UserId);
                 users = likes.Select(like=>like.SourceUser);
             }
+
+            //câu lệnh truy vấn LINQ để tạo danh sách các đối tượng LikeDto từ danh sách người dùng đã được lọc.
             var likedUsers=users.Select(user => new LikeDto{
                 Username = user.UserName,
                 KnownAs = user.KnownAs,
